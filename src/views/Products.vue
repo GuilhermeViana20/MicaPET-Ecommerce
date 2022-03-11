@@ -2,7 +2,7 @@
     <div id="Products">
         <Ecommerce componentView="Navbar"/>
 
-		<Ecommerce componentView="Carousel"/>
+		<ProductsShop/>
         
         <Ecommerce componentView="Footer"/>
     </div>
@@ -10,10 +10,12 @@
 
 <script>
 import Ecommerce from '@/templates/Ecommerce.vue'
+import ProductsShop from '@/components/Products/Shop/ProductsShop'
 
 export default {
     components: {
 		Ecommerce,
+        ProductsShop
 	}
 }
 </script>
