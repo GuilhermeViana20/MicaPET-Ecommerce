@@ -6,7 +6,7 @@
             <div class="footer-top">
             <div class="footer-top-left mt-50">
                 <a href="#0">
-                <img src="assets/images/logo.svg" alt="">
+                <img src="src/assets/images/logo.svg" alt="">
                 </a>
             </div>
             <div class="footer-top-right mt-50">
