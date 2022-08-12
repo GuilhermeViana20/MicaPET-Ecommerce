@@ -1,35 +1,674 @@
-@import "./base.css";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+	font-family: 'Baloo Da 2', sans-serif !important; 
+}
 
-  font-weight: normal;
+img {
+  	max-width: 100%;
+}
+
+a:focus, button:focus, input:focus, textarea:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+button {
+  	transition: all 0.3s linear;
+}
+
+a,a:focus,a:hover {
+	text-decoration: none;
 }
 
 a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+i,
+span {
+  display: inline-block;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubik", sans-serif;
+  color: #000;
+  margin: 0;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.64);
+  margin: 0;
+}
+
+.bg_cover {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: #fff;
+  transition: all 0.3s linear;
+}
+
+.single-countup {
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px 40px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.single-countup h2 {
+  margin-bottom: 10px;
+}
+
+.single-countup .icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #542DED;
+  color: #fff;
+  font-size: 30px;
+}
+
+.search-select select {
+  height: 40px;
+  border: 1px solid #d1d1d1;
+  border-right: 0px;
+  padding: 0 10px;
+  background: transparent;
+  border-radius: 4px 0 0 4px;
+  position: relative;
+}
+
+.search-select select:focus {
+  outline: none;
+}
+
+.search-dark .search-select select {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.search-dark .search-select select option {
+  color: #333;
+}
+
+select,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 30px;
+}
+
+.select-position {
+  position: relative;
+}
+
+.select-position::after {
+  border-bottom: 2px solid #d1d1d1;
+  border-right: 2px solid #d1d1d1;
+  content: '';
+  display: block;
+  height: 8px;
+  margin-top: -4px;
+  pointer-events: none;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform-origin: 66% 66%;
+  transform: rotate(45deg);
+  transition: all 0.15s ease-in-out;
+  width: 8px;
+}
+
+.navbar-top-link li .select-position,
+.menu-top-link li .select-position {
+  margin-right: 10px;
+}
+
+.navbar-top-link li .select-position::after,
+.menu-top-link li .select-position::after {
+  right: 5px;
+}
+
+.navbar-top-link li .select-position select,
+.menu-top-link li .select-position select {
+  background: transparent;
+  border: none;
+  padding: 0 30px 0 10px;
+}
+
+.navbar-top-link li .select-position select:focus,
+.menu-top-link li .select-position select:focus {
+  outline: none;
+}
+
+select {
+  background: transparent;
+  padding: 0 10px;
+  padding-right: 30px;
+  border: none;
+}
+
+select:focus {
+  outline: none;
+}
+
+.breadcrumbs-style select {
+  border: none;
+}
+
+.breadcrumbs-style.breadcrumbs-style-2 select {
+  color: #fff;
+}
+
+.breadcrumbs-style.breadcrumbs-style-2 select option {
+  color: #333;
+}
+
+.country-select select,
+.size-select select {
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #efefef;
+}
+
+.select-items select {
+  height: 40px;
+  background: #EFEFEF;
+  color: #4c4c4c;
+  border-color: transparent;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.select-style-2 .select-items select {
+  height: 40px;
+  background: #EFEFEF;
+  color: #4c4c4c;
+  border-color: transparent;
+  border-radius: 4px;
+  width: 100%;
+  padding-left: 40px;
+}
+
+.select-style-1 .select-items select {
+  height: 40px;
+  background: #542DED;
+  color: #fff;
+  border-color: transparent;
+  border-radius: 4px;
+  width: 100%;
+  padding-left: 40px;
+}
+
+.select-style-3 .select-items {
+  border: 1px solid #542DED;
+  border-radius: 4px;
+}
+
+.select-style-3 .select-items select {
+  height: 40px;
+  background: transparent;
+  border: 1px solid #542DED;
+  color: #333;
+  border-color: transparent;
+  border-radius: 4px;
+  width: 100%;
+  padding-left: 40px;
+}
+
+.select-style-4 .select-items {
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.select-style-4 .select-items select {
+  height: 40px;
+  background: transparent;
+  border: 1px solid #333;
+  color: #333;
+  border-color: transparent;
+  border-radius: 4px;
+  width: 100%;
+  padding-left: 40px;
+}
+
+.search-style-2 .search-select select {
+  background: #EFEFEF;
+  border-color: #efefef;
+  border-right: 1px solid #d1d1d1;
+}
+
+.search-style-2.search-dark .search-select select {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: transparent;
+  border-right: 1px solid #d1d1d1;
+  color: #fff;
+}
+
+.search-style-3 select {
+  background: #EFEFEF;
+  border-color: #efefef;
+  border-left: 1px solid #d1d1d1;
+}
+
+.search-style-3.search-dark select {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: transparent;
+  border-left: 1px solid #d1d1d1;
+  color: #fff;
+}
+
+.search-style-3.search-dark select option {
+  color: #333;
+}
+
+.search-style-6 select {
+  background: transparent;
+  border-color: #d1d1d1;
+  border-left-color: transparent;
+}
+
+.search-style-6.search-dark select {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.24);
+  border-left-color: transparent;
+  color: #fff;
+}
+
+.search-style-6.search-dark select option {
+  color: #333;
+}
+
+.contact-dark-style-1 .select-style-1 select {
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #efefef;
+  border-radius: 4px;
+  padding-left: 40px;
+  border-color: transparent;
+}
+
+.contact-dark-style-1 .select-style-1 select option {
+  color: #333;
+}
+
+.checkout-steps-form-dark-style-1 .select-elements .select-items select {
+  background: rgba(255, 255, 255, 0.2);
+  color: #757575;
+}
+
+.navbar-style-6 .navbar-top-link li select {
+  border: 1px solid #efefef;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.navbar-style-6.navbar-dark-6 .navbar-top-link li select {
+  border: 1px solid rgba(209, 209, 209, 0.2);
+}
+
+.navbar-style-8 .navbar-top-link li select,
+.navbar-style-7 .navbar-top-link li select {
+  color: #fff;
+}
+
+.navbar-style-8 .navbar-top-link li select option,
+.navbar-style-7 .navbar-top-link li select option {
+  color: #333;
+}
+
+.navbar-dark-wrapper .navbar-top-link li select {
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+
+.navbar-dark-wrapper .navbar-top-link li select option {
+  color: #333;
+}
+
+/*=====  Navbar Dark 4 =====*/
+.menu-dark-4 {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  background-color: #393D8E;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .menu-dark-4.navbar-sidebar-dark-3 {
+    left: -290px;
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+@media (max-width: 767px) {
+  .menu-dark-4.navbar-sidebar-dark-3 {
+    left: -290px;
   }
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .menu-dark-4.open {
+    left: 0;
+    transition-delay: 0.3s;
   }
+}
+
+@media (max-width: 767px) {
+  .menu-dark-4.open {
+    left: 0;
+    transition-delay: 0.3s;
+  }
+}
+
+.menu-dark-4 .navbar-close a {
+  font-size: 24px;
+  color: #fff;
+  transition: all 0.3s linear;
+}
+
+.menu-dark-4 .navbar-close a:hover {
+  color: #E14C7B;
+}
+
+.menu-dark-4 .menu-top-area {
+  border-bottom: 1px solid rgba(209, 209, 209, 0.2);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .menu-dark-4 .menu-top-area {
+    border-bottom-color: transparent;
+  }
+}
+
+.menu-dark-4 .menu-top-area .menu-top-left .menu-top-link li a {
+  color: #fff;
+}
+
+.menu-dark-4 .menu-top-area .menu-top-left .menu-top-link li a:hover {
+  color: #E14C7B;
+}
+
+.menu-dark-4 .menu-top-area .menu-top-right .menu-top-link li select {
+  color: #fff;
+  padding-right: 30px;
+}
+
+.menu-dark-4 .menu-top-area .menu-top-right .menu-top-link li select option {
+  color: #000;
+}
+
+.menu-dark-4 .menu-top-area .menu-top-right .menu-top-link li a {
+  color: #fff;
+}
+
+.menu-dark-4 .menu-top-area .menu-top-right .menu-top-link li a:hover {
+  color: #E14C7B;
+}
+
+.menu-dark-4 .main-navbar .navbar-menu .navbar-menu-toggle .menu-toggle .toggle-icon {
+  background-color: #fff;
+}
+
+.menu-dark-4 .main-navbar .navbar-menu .navbar-menu-toggle .menu-toggle.active {
+  background-color: #E14C7B;
+}
+
+.menu-dark-4 .main-navbar .navbar-menu .main-menu {
+  background-color: #161359;
+}
+
+.menu-dark-4 .main-navbar .navbar-menu .main-menu li a {
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .menu-dark-4 .main-navbar .navbar-menu .main-menu li a {
+    border-bottom: 1px solid rgba(209, 209, 209, 0.2);
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-dark-4 .main-navbar .navbar-menu .main-menu li a {
+    border-bottom: 1px solid rgba(209, 209, 209, 0.2);
+  }
+}
+
+.menu-dark-4 .main-navbar .navbar-menu .main-menu li .menu-expand::before {
+  background-color: #fff;
+}
+
+.menu-dark-4 .main-navbar .navbar-menu .main-menu li .menu-expand::after {
+  background-color: #fff;
+}
+
+.menu-dark-4 .main-navbar .navbar-menu .main-menu li.active > .menu-expand::after {
+  height: 0;
+}
+
+.menu-dark-4 .main-navbar .navbar-menu .main-menu li:hover > a {
+  background-color: #E14C7B;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .menu-dark-4 .main-navbar .navbar-menu .main-menu li:hover > a {
+    background-color: transparent;
+    color: #4C4C4C;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-dark-4 .main-navbar .navbar-menu .main-menu li:hover > a {
+    background-color: transparent;
+    color: #4C4C4C;
+  }
+}
+
+.menu-dark-4 .main-navbar .navbar-menu .main-menu li .sub-mega-dropdown {
+  background-color: #161359;
+}
+
+.menu-dark-4 .main-navbar .navbar-menu .main-menu li .sub-mega-dropdown .mega-dropdown .mega-dropdown-list .mega-title {
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .menu-dark-4 .main-navbar .navbar-menu .main-menu li .sub-mega-dropdown .mega-dropdown .mega-dropdown-list .mega-title {
+    border-bottom: 1px solid rgba(209, 209, 209, 0.2);
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-dark-4 .main-navbar .navbar-menu .main-menu li .sub-mega-dropdown .mega-dropdown .mega-dropdown-list .mega-title {
+    border-bottom: 1px solid rgba(209, 209, 209, 0.2);
+  }
+}
+
+.menu-dark-4 .main-navbar .navbar-menu .main-menu li .sub-mega-dropdown .mega-dropdown .mega-dropdown-list ul li:hover > a {
+  color: #E14C7B;
+}
+
+.menu-dark-4 .main-navbar .main-menu-horizontal li a {
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .menu-dark-4 .main-navbar .main-menu-horizontal li a {
+    border-bottom: 1px solid rgba(209, 209, 209, 0.2);
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-dark-4 .main-navbar .main-menu-horizontal li a {
+    border-bottom: 1px solid rgba(209, 209, 209, 0.2);
+  }
+}
+
+.menu-dark-4 .main-navbar .main-menu-horizontal li .menu-expand::before {
+  background-color: #fff;
+}
+
+.menu-dark-4 .main-navbar .main-menu-horizontal li .menu-expand::after {
+  background-color: #fff;
+}
+
+.menu-dark-4 .main-navbar .main-menu-horizontal li:hover > a {
+  background-color: #E14C7B;
+  color: #fff;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.32);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .menu-dark-4 .main-navbar .main-menu-horizontal li:hover > a {
+    background-color: transparent;
+    color: #E14C7B;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-dark-4 .main-navbar .main-menu-horizontal li:hover > a {
+    background-color: transparent;
+    color: #E14C7B;
+    box-shadow: none;
+  }
+}
+
+.menu-dark-4 .main-navbar .main-menu-horizontal li .sub-menu {
+  background-color: #161359;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .menu-dark-4 .main-navbar .main-menu-horizontal li .sub-menu {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-dark-4 .main-navbar .main-menu-horizontal li .sub-menu {
+    background-color: transparent;
+  }
+}
+
+.menu-dark-4 .main-navbar .main-menu-horizontal li .sub-mega-dropdown {
+  background-color: #161359;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .menu-dark-4 .main-navbar .main-menu-horizontal li .sub-mega-dropdown {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-dark-4 .main-navbar .main-menu-horizontal li .sub-mega-dropdown {
+    background-color: transparent;
+  }
+}
+
+.menu-dark-4 .main-navbar .main-menu-horizontal li .sub-mega-dropdown .mega-dropdown .mega-dropdown-list .mega-title {
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .menu-dark-4 .main-navbar .main-menu-horizontal li .sub-mega-dropdown .mega-dropdown .mega-dropdown-list .mega-title {
+    border-bottom: 1px solid rgba(209, 209, 209, 0.2);
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-dark-4 .main-navbar .main-menu-horizontal li .sub-mega-dropdown .mega-dropdown .mega-dropdown-list .mega-title {
+    border-bottom: 1px solid rgba(209, 209, 209, 0.2);
+  }
+}
+
+.menu-dark-4 .navbar-toggle .icon-btn,
+.menu-dark-4 .navbar-cart .icon-btn {
+  color: #fff;
+}
+
+.menu-dark-4 select {
+  color: #fff;
+}
+
+.menu-dark-4 select option {
+  color: #000;
+}
+
+.overlay-dark-4 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  transition: all 0.3s linear;
+  transition-delay: 0.3s;
+}
+
+.overlay-dark-4.open {
+  width: 100%;
+  transition-delay: 0s;
 }
