@@ -1,5 +1,4 @@
-<script>
-</script>
+<script setup></script>
 
 <template>
 	<section class="content-card-style-3 pt-90 pb-100">
@@ -107,6 +106,8 @@
 </template>
 
 <style>
+
+@import url('/src/assets/css/tiny-slider.css');
 
 /*===== All Content Card Style 3 =====*/
 .content-card-style-3 .content-title .title {
